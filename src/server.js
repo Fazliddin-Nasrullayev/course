@@ -7,7 +7,7 @@ console.log(modules);
 const server = new ApolloServer({
     modules
 })
+const gp = server.graphqlPath
 
-server.listen(PORT, err => 
-    err ? console.log(err) : console.log( PORT + server.graphqlPath )
- )
+
+server.listen(PORT, _=> console.log(PORT + gp))

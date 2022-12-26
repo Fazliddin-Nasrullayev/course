@@ -1,7 +1,7 @@
 const { gql } = require('apollo-server')
 
 
-export default gql`
+module.exports =  gql`
     type  Course {
         id: ID!
         title: String!
