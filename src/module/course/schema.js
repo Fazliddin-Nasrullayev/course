@@ -5,14 +5,15 @@ module.exports =  gql`
     type  Course {
         id: ID!
         title: String!
+        teacher: [ Teacher ]!
     }
 
-    type Query {
+   extend type Query {
         course: [ Course ]!
     }
 
-    type Mutation {
-        createCourse(title: String!): Course!
+   extend type Mutation {
+        createCourse(title: String!): [Course!]
     }
 
 
