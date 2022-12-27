@@ -17,9 +17,9 @@ module.exports = {
     },
 
     Teacher: {
-        id: t => t.teacher_id, 
-        name: t => t.teacher_name, 
-        course: t => t.course,
-        kurs: async t => await courseModel.findCourse(t.course)
+        id: g => g.teacher_id, 
+        name: g => g.teacher_name, 
+        course: g => g.course,
+        kurs: async g => await courseModel.findCourse(g.course)
     }
 }

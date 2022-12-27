@@ -13,8 +13,8 @@ module.exports = {
     },
 
     Course: {
-        id: c => c.course_id,
-        title: c => c.course_title,
-        teacher: async c => await teacherModel.findByCourse(c.course_id)
+        id: g => g.course_id,
+        title: g => g.course_title,
+        teacher: async g => await teacherModel.findByCourse(g.course_id)
     }
 }
